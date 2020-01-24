@@ -12,10 +12,11 @@ struct ContentView: View {
     @State private var isPresented = false
     
     var body: some View {
-        Button("Open activity") {
+        Button("Pick a font") {
             self.isPresented = true
         }.sheet(isPresented: $isPresented) {
-            ActivityView(activityItems: [URL(string: "https://www.apple.com")!])
+//            ActivityView(activityItems: [URL(string: "https://www.apple.com")!])
+            FontPicker()
         }
     }
 }

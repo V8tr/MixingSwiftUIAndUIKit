@@ -9,6 +9,7 @@
 import UIKit
 
 class MyActivity: UIActivity {
+    
     override class var activityCategory: UIActivity.Category {
         return .action
     }
@@ -18,7 +19,7 @@ class MyActivity: UIActivity {
     }
 
     override var activityTitle: String? {
-        return "My Activity"
+        return "Open in Safari"
     }
 
     override var activityImage: UIImage? {
@@ -26,10 +27,7 @@ class MyActivity: UIActivity {
     }
     
     override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
-//        for case is UIImage in activityItems {
-//            return true
-//        }
-        return true
+        return activityItems.contains { $0 is URL }
     }
     
     override func prepare(withActivityItems activityItems: [Any]) {
@@ -40,25 +38,7 @@ class MyActivity: UIActivity {
     }
     
     override func perform() {
-//        let url = URL(string: "https://mustachify.app/")!
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "POST"
-//        request.httpBody = self.sourceImageData
-//
-//        URLSession.shared.dataTask(with: request) { (data, _, error) in
-//            guard error == nil else {
-//                self.activityDidFinish(false)
-//                return
-//            }
-//
-//            if let data = data,
-//                let image = UIImage(data: data)
-//            {
-//                self.mustachioedImage = image
-//                self.activityDidFinish(true)
-//            } else {
-//                self.activityDidFinish(false)
-//            }
-//        }
+        // do something
+        activityDidFinish(true)
     }
 }
