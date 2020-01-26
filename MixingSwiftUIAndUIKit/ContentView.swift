@@ -10,13 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isPresented = false
+    @State private var font: UIFontDescriptor?
     
     var body: some View {
-        Button("Pick a font") {
-            self.isPresented = true
+        VStack {
+            Text(font?.description ?? "")
+            Button("Pick a font") {
+                self.isPresented = true
+            }
         }.sheet(isPresented: $isPresented) {
-//            ActivityView(activityItems: [URL(string: "https://www.apple.com")!])
-            FontPicker()
+            FontPicker(font: self.$font)
         }
     }
 }

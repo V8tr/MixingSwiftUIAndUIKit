@@ -17,20 +17,30 @@ struct FontPicker: UIViewControllerRepresentable {
     }
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<FontPicker>) -> UIFontPickerViewController {
-        return UIFontPickerViewController()
+        let picker = UIFontPickerViewController()
+        picker.delegate = context.coordinator
+        return picker
     }
     
     func updateUIViewController(_ uiViewController: UIFontPickerViewController, context: UIViewControllerRepresentableContext<FontPicker>) {
-        
+        context.environment[.foregroundColor]
     }
 }
 
 extension FontPicker {
-    class Coordinator {
+    class Coordinator: NSObject, UIFontPickerViewControllerDelegate {
         var parent: FontPicker
 
         init(_ parent: FontPicker) {
             self.parent = parent
+        }
+        
+        func fontPickerViewControllerDidCancel(_ viewController: UIFontPickerViewController) {
+            
+        }
+
+        func fontPickerViewControllerDidPickFont(_ viewController: UIFontPickerViewController) {
+            parent.font = viewController.selectedFontDescriptor
         }
     }
 }
