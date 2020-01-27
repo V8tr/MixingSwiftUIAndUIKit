@@ -14,7 +14,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text(font?.description ?? "")
+            Text(font?.postscriptName ?? "")
+            Spacer().frame(height: 30)
             Button("Pick a font") {
                 self.isPresented = true
             }

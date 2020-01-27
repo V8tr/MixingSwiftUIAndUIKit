@@ -11,6 +11,7 @@ import SwiftUI
 
 struct FontPicker: UIViewControllerRepresentable {
     @Binding var font: UIFontDescriptor?
+    @Environment(\.presentationMode) var presentationMode
     
     func makeCoordinator() -> FontPicker.Coordinator {
         return Coordinator(self)
@@ -23,14 +24,15 @@ struct FontPicker: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIFontPickerViewController, context: UIViewControllerRepresentableContext<FontPicker>) {
-        context.environment[.foregroundColor]
+        
     }
 }
 
 extension FontPicker {
     class Coordinator: NSObject, UIFontPickerViewControllerDelegate {
         var parent: FontPicker
-
+        @Environment(\.presentationMode) var presentationMode
+        
         init(_ parent: FontPicker) {
             self.parent = parent
         }
@@ -41,6 +43,7 @@ extension FontPicker {
 
         func fontPickerViewControllerDidPickFont(_ viewController: UIFontPickerViewController) {
             parent.font = viewController.selectedFontDescriptor
+            parent.presentationMode.wrappedValue.dismiss()
         }
     }
 }
