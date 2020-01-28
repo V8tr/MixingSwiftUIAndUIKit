@@ -15,9 +15,7 @@
 		809A18B123D84CCF005C63DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A18AF23D84CCF005C63DC /* AppDelegate.swift */; };
 		809A18B223D84CCF005C63DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A18B023D84CCF005C63DC /* SceneDelegate.swift */; };
 		80B5791623DB1D7300112BC7 /* FontPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B5791523DB1D7300112BC7 /* FontPicker.swift */; };
-		80B8FD4823D9BBE500FD199F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8FD4723D9BBE500FD199F /* MapView.swift */; };
-		80B8FD4A23D9BE9700FD199F /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8FD4923D9BE9700FD199F /* ActivityView.swift */; };
-		80B8FD4E23DAEBC000FD199F /* MyActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B8FD4D23DAEBC000FD199F /* MyActivity.swift */; };
+		88E2C6EA23E0C1CE00EF5304 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2C6E923E0C1CE00EF5304 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +41,7 @@
 		809A18AF23D84CCF005C63DC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809A18B023D84CCF005C63DC /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		80B5791523DB1D7300112BC7 /* FontPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPicker.swift; sourceTree = "<group>"; };
-		80B8FD4723D9BBE500FD199F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		80B8FD4923D9BE9700FD199F /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		80B8FD4D23DAEBC000FD199F /* MyActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActivity.swift; sourceTree = "<group>"; };
+		88E2C6E923E0C1CE00EF5304 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				809A188E23D84C6A005C63DC /* ContentView.swift */,
-				80B8FD4723D9BBE500FD199F /* MapView.swift */,
-				80B8FD4923D9BE9700FD199F /* ActivityView.swift */,
-				80B8FD4D23DAEBC000FD199F /* MyActivity.swift */,
 				80B5791523DB1D7300112BC7 /* FontPicker.swift */,
+				88E2C6E923E0C1CE00EF5304 /* WebView.swift */,
 				809A18AE23D84CCF005C63DC /* App */,
 				809A18AC23D84CA3005C63DC /* SupportingFiles */,
 				809A189223D84C6B005C63DC /* Preview Content */,
@@ -237,11 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				80B5791623DB1D7300112BC7 /* FontPicker.swift in Sources */,
-				80B8FD4E23DAEBC000FD199F /* MyActivity.swift in Sources */,
+				88E2C6EA23E0C1CE00EF5304 /* WebView.swift in Sources */,
 				809A18B123D84CCF005C63DC /* AppDelegate.swift in Sources */,
-				80B8FD4823D9BBE500FD199F /* MapView.swift in Sources */,
 				809A188F23D84C6A005C63DC /* ContentView.swift in Sources */,
-				80B8FD4A23D9BE9700FD199F /* ActivityView.swift in Sources */,
 				809A18B223D84CCF005C63DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
