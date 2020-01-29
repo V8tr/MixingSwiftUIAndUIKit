@@ -15,7 +15,9 @@ struct Spinner: UIViewRepresentable {
     let style: UIActivityIndicatorView.Style
 
     func makeUIView(context: Context) -> UIActivityIndicatorView {
-        UIActivityIndicatorView(style: style)
+        let spinner = UIActivityIndicatorView(style: style)
+        spinner.hidesWhenStopped = true
+        return spinner
     }
 
     func updateUIView(_ uiView: UIActivityIndicatorView, context: Context) {
