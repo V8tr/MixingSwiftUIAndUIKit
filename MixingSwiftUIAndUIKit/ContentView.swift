@@ -20,7 +20,8 @@ struct ContentView: View {
                 self.isPresented = true
             }
         }.sheet(isPresented: $isPresented) {
-            FontPicker(font: self.$font)
+//            FontPicker(font: self.$font)
+            LoadingWebView(url: URL(string: "https://www.apple.com")!)
         }
     }
 }

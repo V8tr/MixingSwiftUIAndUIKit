@@ -10,30 +10,66 @@ import SwiftUI
 import WebKit
 import UIKit
 
-https://github.com/kylehickinson/SwiftUI-WebView/blob/master/Sources/WebView/WebView.swift
+//https://github.com/bvankuik/WebViewVideoPlayerSwiftUI/blob/master/WebViewVideoPlayer/WebView.swift
 struct WebView: UIViewRepresentable {
-    @ObservedObject var state: State
-
-    func makeUIView(context: UIViewRepresentableContext<WebView>) -> WKWebView {
+    
+    enum State {
+        case initial(URL)
+        case idle
+        case loading(URL)
+        case error(Error)
+    }
+    
+    @Binding var state: State
+    
+    func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
+        webView.navigationDelegate = context.coordinator
         return webView
     }
     
-    func updateUIView(_ uiView: WKWebView, context: UIViewRepresentableContext<WebView>) {
-        
+    func updateUIView(_ webView: WKWebView, context: Context) {
+        switch state {
+        case .initial(let url):
+            webView.load(URLRequest(url: url))
+        default:
+            break
+        }
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator()
+        Coordinator(self)
     }
 }
 
 extension WebView {
-    class Coordinator: NSObject, WKNavigationDelegate {}
-}
-
-extension WebView {
-    class State: ObservableObject {
+    class Coordinator: NSObject, WKNavigationDelegate {
+        var parent: WebView
         
+        init(_ parent: WebView) {
+            self.parent = parent
+        }
+        
+        // MARK: - WKNavigationDelegate
+        
+        func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+            webView.url.map { parent.state = .loading($0) }
+        }
+        
+        func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+            webView.url.map { parent.state = .loading($0) }
+        }
+        
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            parent.state = .idle
+        }
+        
+        func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+            parent.state = .error(error)
+        }
+        
+        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+            parent.state = .error(error)
+        }
     }
 }

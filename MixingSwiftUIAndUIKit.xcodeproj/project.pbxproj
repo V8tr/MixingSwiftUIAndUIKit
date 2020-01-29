@@ -15,6 +15,8 @@
 		809A18B123D84CCF005C63DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A18AF23D84CCF005C63DC /* AppDelegate.swift */; };
 		809A18B223D84CCF005C63DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809A18B023D84CCF005C63DC /* SceneDelegate.swift */; };
 		80B5791623DB1D7300112BC7 /* FontPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B5791523DB1D7300112BC7 /* FontPicker.swift */; };
+		80F3E01623E1A19700240C65 /* LoadingWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E01523E1A19700240C65 /* LoadingWebView.swift */; };
+		80F3E01823E1A24600240C65 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F3E01723E1A24600240C65 /* Spinner.swift */; };
 		88E2C6EA23E0C1CE00EF5304 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2C6E923E0C1CE00EF5304 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		809A18AF23D84CCF005C63DC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809A18B023D84CCF005C63DC /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		80B5791523DB1D7300112BC7 /* FontPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPicker.swift; sourceTree = "<group>"; };
+		80F3E01523E1A19700240C65 /* LoadingWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingWebView.swift; sourceTree = "<group>"; };
+		80F3E01723E1A24600240C65 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		88E2C6E923E0C1CE00EF5304 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +90,8 @@
 				809A188E23D84C6A005C63DC /* ContentView.swift */,
 				80B5791523DB1D7300112BC7 /* FontPicker.swift */,
 				88E2C6E923E0C1CE00EF5304 /* WebView.swift */,
+				80F3E01523E1A19700240C65 /* LoadingWebView.swift */,
+				80F3E01723E1A24600240C65 /* Spinner.swift */,
 				809A18AE23D84CCF005C63DC /* App */,
 				809A18AC23D84CA3005C63DC /* SupportingFiles */,
 				809A189223D84C6B005C63DC /* Preview Content */,
@@ -233,8 +239,10 @@
 				80B5791623DB1D7300112BC7 /* FontPicker.swift in Sources */,
 				88E2C6EA23E0C1CE00EF5304 /* WebView.swift in Sources */,
 				809A18B123D84CCF005C63DC /* AppDelegate.swift in Sources */,
+				80F3E01823E1A24600240C65 /* Spinner.swift in Sources */,
 				809A188F23D84C6A005C63DC /* ContentView.swift in Sources */,
 				809A18B223D84CCF005C63DC /* SceneDelegate.swift in Sources */,
+				80F3E01623E1A19700240C65 /* LoadingWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

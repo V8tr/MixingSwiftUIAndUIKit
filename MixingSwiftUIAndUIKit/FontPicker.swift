@@ -17,13 +17,13 @@ struct FontPicker: UIViewControllerRepresentable {
         return Coordinator(self)
     }
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<FontPicker>) -> UIFontPickerViewController {
+    func makeUIViewController(context: Context) -> UIFontPickerViewController {
         let picker = UIFontPickerViewController()
         picker.delegate = context.coordinator
         return picker
     }
     
-    func updateUIViewController(_ uiViewController: UIFontPickerViewController, context: UIViewControllerRepresentableContext<FontPicker>) {
+    func updateUIViewController(_ uiViewController: UIFontPickerViewController, context: Context) {
         
     }
 }
